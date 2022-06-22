@@ -8,8 +8,11 @@
         <entry key="..\:/LoginActivity/app/src/main/res/drawable/vie_bg.xml" value="0.183" />
         <entry key="..\:/LoginActivity/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/LoginActivity/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/LoginActivity/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/LoginActivity/app/src/main/res/layout/fragment_forget_pass.xml" value="0.25" />
         <entry key="..\:/LoginActivity/app/src/main/res/layout/login_tab_fragment.xml" value="0.25" />
         <entry key="..\:/LoginActivity/app/src/main/res/layout/login_tab_fragment1.xml" value="0.25" />
+        <entry key="..\:/LoginActivity/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.183" />
       </map>
     </option>
   </component>
