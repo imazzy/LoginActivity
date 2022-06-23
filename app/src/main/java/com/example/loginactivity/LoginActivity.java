@@ -11,7 +11,7 @@ public class LoginActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    float v=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        tabLayout.setTranslationY(300);
-
-        tabLayout.setAlpha(v);
-
-        tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
 
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_bg">
+
+    <EditText
+        android:id="@+id/mobileOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter OTP sent to Mobile Number"
+        android:inputType="numberPassword"
+        android:paddingLeft="15dp"
+        android:elevation="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/emailOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter OTP sent to Email Id"
+        android:inputType="numberPassword"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:elevation="40dp"
+        android:paddingRight="65dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mobileOTP"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otpCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailOTP"
+        android:text="Check OTP"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:elevation="40dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="35dp"
+        />
+
+</RelativeLayout>

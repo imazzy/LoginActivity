@@ -1,5 +1,6 @@
 package com.example.loginactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ public class LoginTabFragment1 extends Fragment {
 //    TextView forgetpass;
 //    Button login;
 //    float v=0;
+    TextView createacc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class LoginTabFragment1 extends Fragment {
 //        password=root.findViewById(R.id.password);
 //        forgetpass=root.findViewById(R.id.forgetpass);
 //        login=root.findViewById(R.id.login);
+        createacc=root.findViewById(R.id.createacc);
 //
 //        username.setTranslationX(800);
 //        password.setTranslationX(800);
@@ -39,6 +42,14 @@ public class LoginTabFragment1 extends Fragment {
 //        password.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
 //        forgetpass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
 //        login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
+
+        createacc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),worker_signupActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

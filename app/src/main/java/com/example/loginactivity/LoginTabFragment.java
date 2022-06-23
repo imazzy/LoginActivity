@@ -24,7 +24,7 @@ public class LoginTabFragment extends Fragment {
         username=root.findViewById(R.id.username);
         password=root.findViewById(R.id.password);
         forgetpass=root.findViewById(R.id.forgetpass);
-        login=root.findViewById(R.id.login);
+        login=root.findViewById(R.id.next);
         createacc=root.findViewById(R.id.createacc);
 
         username.setTranslationX(800);

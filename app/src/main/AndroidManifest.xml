@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginActivity">
         <activity
+            android:name=".worker_signupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user_popup"
+            android:exported="false" />
+        <activity
             android:name=".signupActivity"
             android:exported="false" />
         <activity
