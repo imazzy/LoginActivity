@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 public class LoginTabFragment1 extends Fragment {
 //    EditText username,password;
-//    TextView forgetpass;
+    TextView forgetpass;
 //    Button login;
 //    float v=0;
     TextView createacc;
@@ -24,7 +24,7 @@ public class LoginTabFragment1 extends Fragment {
 
 //        username=root.findViewById(R.id.username);
 //        password=root.findViewById(R.id.password);
-//        forgetpass=root.findViewById(R.id.forgetpass);
+        forgetpass=root.findViewById(R.id.forgetpass);
 //        login=root.findViewById(R.id.login);
         createacc=root.findViewById(R.id.createacc);
 //
@@ -47,6 +47,14 @@ public class LoginTabFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),worker_signupActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        forgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ForgetPass.class);
                 startActivity(intent);
             }
         });

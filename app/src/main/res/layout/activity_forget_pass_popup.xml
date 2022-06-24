@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_bg"
+    tools:context=".forget_passPopup">
+
+    <EditText
+        android:id="@+id/mobileOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter OTP"
+        android:inputType="numberPassword"
+        android:paddingLeft="15dp"
+        android:elevation="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/otpCheckPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobileOTP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/button_bg"
+        android:elevation="40dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="Check OTP"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/createPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter new password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:enabled="false"
+        android:elevation="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/otpCheckPopup"/>
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter new password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:enabled="false"
+        android:elevation="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/createPass"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createPassbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmPassword"
+        android:text="Create Password"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:elevation="40dp"
+        android:layout_marginTop="35dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:enabled="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        />
+
+</RelativeLayout>

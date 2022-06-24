@@ -53,7 +53,13 @@ public class LoginTabFragment extends Fragment {
             }
         });
 
-
+        forgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),ForgetPass.class);
+                startActivity(intent);
+            }
+        });
 
         return root;
     }

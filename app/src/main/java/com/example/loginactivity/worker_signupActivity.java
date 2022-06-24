@@ -3,6 +3,7 @@ package com.example.loginactivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -62,6 +63,8 @@ public class worker_signupActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(worker_signupActivity.this, "Your Application has been submitted and sent to Admin for approval!!!", Toast.LENGTH_LONG).show();
                 popup.dismiss();
+                Intent intent=new Intent(worker_signupActivity.this,LoginActivity.class);
+                startActivity(intent);
             }
         });
 
