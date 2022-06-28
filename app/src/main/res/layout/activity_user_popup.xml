@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:background="@drawable/dialog_bg">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mobileOTP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/edit_text_bg"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                android:layout_height="wrap_content"
         android:hint="Enter OTP sent to Mobile Number"
-        android:inputType="numberPassword"
-        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:elevation="40dp"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="15dp"
-        android:layout_centerHorizontal="true"/>
-
-    <EditText
-        android:id="@+id/emailOTP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/edit_text_bg"
-        android:hint="Enter OTP sent to Email Id"
-        android:inputType="numberPassword"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:elevation="40dp"
-        android:paddingRight="65dp"
-        android:paddingBottom="15dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/mobileOTP"/>
+        app:layout_constraintWidth_percent=".8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="numberPassword"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailOTP"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                android:layout_height="wrap_content"
+        android:hint="Enter OTP sent to Email Id"
+        android:elevation="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mobileOTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintTop_toBottomOf="@id/mobileOTP">
+
+        <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+            android:inputType="numberPassword"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/otpCheck"
@@ -43,16 +51,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/emailOTP"
         android:text="Check OTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/button_bg"
         android:textColor="@color/white"
         android:elevation="40dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingRight="15dp"
+        android:padding="15dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="35dp"
-        />
+        android:layout_marginBottom="45dp"
+        app:layout_constraintTop_toBottomOf="@id/emailOTP" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

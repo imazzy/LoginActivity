@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Worker"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+
         final LoginAdapter adapter=new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 

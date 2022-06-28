@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class LoginTabFragment extends Fragment {
-    EditText username,password;
+    TextInputLayout username,password;
     Button login;
     TextView forgetpass,createacc;
     float v=0;

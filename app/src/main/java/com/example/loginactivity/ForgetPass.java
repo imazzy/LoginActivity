@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class ForgetPass extends AppCompatActivity {
 
     Dialog popup;
@@ -39,8 +41,8 @@ public class ForgetPass extends AppCompatActivity {
         });
 
         Button checkOTP=popup.findViewById(R.id.otpCheckPopup);
-        EditText newPass=popup.findViewById(R.id.createPass);
-        EditText confirmPass=popup.findViewById(R.id.confirmPassword);
+        TextInputLayout newPass=popup.findViewById(R.id.createPass);
+        TextInputLayout confirmPass=popup.findViewById(R.id.confirmPassword);
         Button createpassBtn = popup.findViewById(R.id.createPassbtn);
 
         checkOTP.setOnClickListener(new View.OnClickListener() {

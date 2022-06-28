@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:background="@drawable/dialog_bg"
     tools:context=".forget_passPopup">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mobileOTP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/edit_text_bg"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                android:layout_height="wrap_content"
         android:hint="Enter OTP"
-        android:inputType="numberPassword"
-        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:elevation="40dp"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="15dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"/>
+        app:layout_constraintWidth_percent=".8">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="numberPassword"
+
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/otpCheckPopup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mobileOTP"
-        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobileOTP"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/button_bg"
@@ -42,61 +46,66 @@
         android:text="Check OTP"
         android:textColor="@color/white" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/createPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/edit_text_bg"
-        android:hint="Enter new password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:enabled="false"
-        android:elevation="40dp"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="15dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/otpCheckPopup"/>
-
-    <EditText
-        android:id="@+id/confirmPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/edit_text_bg"
-        android:hint="Enter new password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                android:layout_height="wrap_content"
+        android:hint="Create Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/otpCheckPopup"
         android:elevation="40dp"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="15dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/createPass"/>
+        app:layout_constraintWidth_percent=".8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmPassword"
+        android:layout_width="0dp"
+        android:layout_marginTop="35dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"                android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/createPass"
+        android:elevation="40dp"
+        app:layout_constraintWidth_percent=".8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/createPassbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/confirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
         android:text="Create Password"
         android:background="@drawable/button_bg"
         android:textColor="@color/white"
         android:elevation="40dp"
         android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:paddingRight="15dp"
         android:enabled="false"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
         />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
